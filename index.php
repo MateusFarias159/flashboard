@@ -47,7 +47,7 @@
                     </div>
                 </div>
 
-                <input id="submit-button" name="btn-entrar" type="submit" class="btn btn-primary mb-3" onclick="valida()" value="Login" />
+                <input id="submit-button" name="btn-entrar" type="submit" class="btn btn-primary mb-3" value="Login" />
             
             </form>
 
