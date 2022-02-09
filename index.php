@@ -1,9 +1,4 @@
 <?php
-require_once "model/Conexao.php";
-session_start();
-
-
-
 
 ?>
 
@@ -25,7 +20,8 @@ session_start();
     <link rel="stylesheet" href="./styles/index.min.css" />
     <link rel="stylesheet" href="./css/style.css">
 
-    <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>  
+    <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
+    <script src="/scripts/validacao.js"></script>
 </head>
 
 <body>
@@ -37,7 +33,7 @@ session_start();
         <p>Faça login para acessar seus produtos!</p>
     </section>
 
-    <form method="POST" action="scripts/validacao.php" class=" container register-form" id="register-form">
+    <form method="POST" action="/scripts/validacao.php" class=" container register-form" id="register-form">
                 <div class="row ">
                     <div class="col-sm-12 col-lg-6 mb-lg-5 mb-3">
                         <label for="user-input">Usuário</label>
@@ -51,7 +47,7 @@ session_start();
                     </div>
                 </div>
 
-                <input id="submit-button" name="btn-entrar" type="submit" class="btn btn-primary mb-3" value="Login" />
+                <input id="submit-button" name="btn-entrar" type="submit" class="btn btn-primary mb-3" onclick="valida()" value="Login" />
             
             </form>
 

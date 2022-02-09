@@ -3,7 +3,7 @@
 session_start();
 
 if(!isset($_SESSION["login"]) OR $_SESSION["login"] == false){
-    header("Location: ../"); exit;
+    header("Location: ../index.php"); exit;
 }
 
 require_once "model/Produto.php";
