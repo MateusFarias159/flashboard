@@ -32,6 +32,13 @@ class Conexao{
         return $resource->fetchAll();
     }
 
+    public static function selectAll($instrucao){
+        $resource = Conexao::getConexao()
+        ->prepare($instrucao);
+        $resource->execute();
+        return $resource->fetchAll();
+    }
+
     public static function insert($tabela, $parametros,
     $valores){
         $sql = "INSERT INTO " . $tabela . " (" .

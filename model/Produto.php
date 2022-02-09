@@ -58,16 +58,16 @@ class Produto{
         $tabela = "produtos";
         $colunas = "id, nome, tipo, preco";
         $dados = Conexao::select($tabela, $colunas);
-        $livros = [];
+        $produtos = [];
         foreach($dados as $d){
             $b = new Produto();
             $b->id = $d["id"];
             $b->nome = $d["nome"];
             $b->tipo = $d["tipo"];
             $b->preco = $d["preco"];
-            $livros[] = $b;
+            $produtos[] = $b;
         }
-        return $livros;
+        return $produtos;
     }
 
     public static function getPorId($id){

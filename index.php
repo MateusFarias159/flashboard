@@ -1,6 +1,10 @@
 <?php
+require_once "model/Conexao.php";
 session_start();
-$_SESSION["login"] = false;
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +51,7 @@ $_SESSION["login"] = false;
                     </div>
                 </div>
 
-                <input id="submit-button" type="submit" class="btn btn-primary mb-3" value="Login" />
+                <input id="submit-button" name="btn-entrar" type="submit" class="btn btn-primary mb-3" value="Login" />
             
             </form>
 
