@@ -1,11 +1,5 @@
 <?php
 
-session_start();
-
-if(!isset($_SESSION["login"]) OR $_SESSION["login"] == false){
-    header("Location: ../"); exit;
-}
-
 require_once "model/Produto.php";
 
 if(isset($_GET["id"])){

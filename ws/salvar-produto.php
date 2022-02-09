@@ -17,4 +17,4 @@ print_r($produto);
         $produto->editar();
     }
 
-    header("Location: ../");
+    header("Location: ../inicio.php");
