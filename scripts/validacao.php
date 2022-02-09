@@ -15,6 +15,7 @@ if(empty($usuario->getUsuario()) OR empty($usuario->getSenha())){
 }if ($usuario->getUsuario() != "admin" AND $usuario->getSenha() != "123") {
     header("Location: ../"); exit;
 }else{
+    session_start();
     $_SESSION["login"] = true;
     $_SESSION["id"] = $usuario->getId();
     header("Location: ../inicio.php"); exit;

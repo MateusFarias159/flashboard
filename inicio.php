@@ -8,8 +8,8 @@ if(!isset($_SESSION["login"]) OR $_SESSION["login"] == false){
 
 require_once "model/Produto.php";
 
-if(isset($_GET["id"])){
-    $produto = Produto::getPorId($_GET["id"]);
+if(isset($_POST["id"])){
+    $produto = Produto::getPorId($_POST["id"]);
     //print_r($produto);
 }
 
