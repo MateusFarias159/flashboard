@@ -1,7 +1,7 @@
 <?php
 require_once "../model/Produto.php";
 
-echo $_GET["id"];
-Produto::deletar($_GET["id"]);
+echo $_POST["id"];
+Produto::deletar($_POST["id"]);
 
 header("Location: ../index.php?msg=Item deletado");

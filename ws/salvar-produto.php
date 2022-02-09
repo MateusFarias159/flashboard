@@ -3,10 +3,10 @@
 require_once "../model/Produto.php";
 
 $produto = new Produto();
-$produto->setId($_GET["id"]);
-$produto->setNome($_GET["nome"]);
-$produto->setTipo($_GET["tipo"]);
-$produto->setPreco($_GET["preco"]);
+$produto->setId($_POST["id"]);
+$produto->setNome($_POST["nome"]);
+$produto->setTipo($_POST["tipo"]);
+$produto->setPreco($_POST["preco"]);
 
 print_r($produto);
 
