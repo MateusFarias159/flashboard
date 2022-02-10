@@ -142,7 +142,7 @@ if(isset($_POST["id"])){
             <p class="card-text">
                 <?= $b->getPreco(); ?>
             </p>
-<a href="inicio.php?id=<?= $b->getId(); ?>"
+<a href="index.php?id=<?= $b->getId(); ?>"
     class="card-link btn btn-warning">
     Editar
 </a>

@@ -44,7 +44,7 @@ if(isset($_GET["id"])){
                 <ul class="navbar-nav mr-auto">
 
                   <li class="nav-item active">
-                    <a class="nav-link" href="inicio.php">Produtos <span class="sr-only"></span></a>
+                    <a class="nav-link" href="index.php">Produtos <span class="sr-only"></span></a>
                   </li>
 
                   <li class="nav-item">
@@ -58,3 +58,109 @@ if(isset($_GET["id"])){
         </nav>
 
     </header>
+    <main>
+
+
+
+<div class="row">
+
+<section id="produtos" class="lista">
+
+<section class="spikes" id="separator-info">
+    <h3>
+        CATÁLOGO
+    </h3>
+    <p>Aqui estão os produtos que você registrou até agora! </p>
+</section>
+
+<?php
+$produtos = Produto::listarTodos();
+//print_r($produtos);
+foreach($produtos as $b):
+?>
+<div class="card card-w booksize
+    d-inline-block m-2 text-left">
+<div class="card-body">
+    <!-- Código "mesclado" -->
+    <!-- insert img -->
+    <h5 class="card-title">
+        <?php echo $b->getNome(); ?>
+    </h5>
+    <h6 class="card-subtitle">
+        <?= $b->getTipo(); ?>
+    </h6>
+    <p class="card-text">
+        <?= $b->getPreco(); ?>
+    </p>
+<a href="index.php?id=<?= $b->getId(); ?>"
+class="card-link btn btn-warning">
+Editar
+</a>
+<a
+onclick="deletar(<?= $b->getId(); ?>)"
+class="card-link btn btn-secondary">
+Deletar
+</a>
+</div>
+</div>
+<?php 
+endforeach;
+?>
+</section>
+
+
+<section id="produtos" class="lista">
+
+<section class="spikes" id="separator-info">
+    <h3>
+        CATÁLOGO
+    </h3>
+    <p>Aqui estão os produtos que você registrou até agora! </p>
+</section>
+
+<?php
+$produtos = Produto::listarTodos();
+//print_r($produtos);
+foreach($produtos as $b):
+?>
+<div class="card card-w booksize
+    d-inline-block m-2 text-left">
+<div class="card-body">
+    <!-- Código "mesclado" -->
+    <!-- insert img -->
+    <h5 class="card-title">
+        <?php echo $b->getNome(); ?>
+    </h5>
+    <h6 class="card-subtitle">
+        <?= $b->getTipo(); ?>
+    </h6>
+    <p class="card-text">
+        <?= $b->getPreco(); ?>
+    </p>
+<a href="index.php?id=<?= $b->getId(); ?>"
+class="card-link btn btn-warning">
+Editar
+</a>
+<a
+onclick="deletar(<?= $b->getId(); ?>)"
+class="card-link btn btn-secondary">
+Deletar
+</a>
+</div>
+</div>
+<?php 
+endforeach;
+?>
+</section>
+
+
+
+
+
+
+</div>
+
+    </main>
+
+</body>
+</html>
