@@ -4,7 +4,7 @@ require_once "model/Produto.php";
 
 if(isset($_POST["id"])){
     $produto = Produto::getPorId($_POST["id"]);
-    //print_r($produto);
+    print_r($produto);
 }
 
 ?>
